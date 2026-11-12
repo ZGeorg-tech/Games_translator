@@ -4,6 +4,16 @@
 
 # Games_translator
 
+Games_translator is a free, open-source game screen translator for Windows. It uses OCR to read text from a selected area of the game window and displays the translation in a real-time in-game overlay. Translation can run locally offline; online translation is optional.
+
+| Windows download (R04b) | Translation directions |
+| --- | --- |
+| [Block 1](docs/DOWNLOADS.md#block-1) | English → Russian / Ukrainian |
+| [Block 2](docs/DOWNLOADS.md#block-2) | Japanese / Simplified Chinese / Traditional Chinese → English / Russian / Ukrainian |
+| [Block 3](docs/DOWNLOADS.md#block-3) | English → Japanese / Simplified Chinese / Traditional Chinese |
+
+Choose **Block 3** to translate English-language games into Japanese or Chinese. You only need to download the block for your language pair.
+
 *From an idea to an open project*
 
 ## How it started

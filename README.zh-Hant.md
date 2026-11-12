@@ -4,6 +4,16 @@
 
 # Games_translator
 
+Games_translator 是一款免費、開放原始碼的 Windows 遊戲畫面翻譯工具。它透過 OCR 辨識遊戲視窗指定區域的文字，並將譯文即時疊加在遊戲畫面上。翻譯可以在電腦上離線執行，也可視需要使用線上翻譯服務。
+
+| 下載 Windows 版 (R04b) | 翻譯方向 |
+| --- | --- |
+| [Block 1](docs/DOWNLOADS.md#block-1) | 英文 → 俄文 / 烏克蘭文 |
+| [Block 2](docs/DOWNLOADS.md#block-2) | 日文 / 簡體中文 / 繁體中文 → 英文 / 俄文 / 烏克蘭文 |
+| [Block 3](docs/DOWNLOADS.md#block-3) | 英文 → 日文 / 簡體中文 / 繁體中文 |
+
+想把英文遊戲翻譯成繁體中文、簡體中文或日文，請選 **Block 3**。只需下載符合所需翻譯方向的區塊。
+
 *從一個想法到公開專案*
 
 ## 最初的想法
