@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "status": "pre-distribution content contract, not an installer",
+  "root_files": [
+    "Games_translator.exe", "installation.json",
+    "block2_runtime.py", "block3_runtime.py", "config.py", "console_output.py",
+    "data_migration.py", "data_paths.py", "game_background_paddle.py", "game_field_visual_gate.py",
+    "hardware_detection.py", "language_blocks.py", "launcher.py", "launcher_style.py", "localization.py", "main.py",
+    "ocr_benchmark_crops.py", "ocr_core.py", "ocr_engine.py", "ocr_settings.py",
+    "online_credentials.py", "online_google_worker.py", "online_translation.py", "online_ui.py",
+    "overlay_freshness.py", "post_ocr_classifier.py", "python_runtime.py", "quality_runtime_selector.py",
+    "resource_monitor.py", "resource_registry.py", "responsiveness_diagnostics.py", "runtime_devices.py",
+    "session_logging.py", "startup_block3_diagnostics.py", "subtitle_sequence_gate.py", "subtitle_visuals.py",
+    "temp_lifecycle.py", "thread_growth_diagnostics.py", "translation_engine.py", "translation_history.py",
+    "translation_memory.py", "translation_pipeline_persistence.py", "translator_core.py", "visual_text_gate.py"
+  ],
+  "source_roots": ["translation_backends", "ocr_backends", "translation_workers", "translation_quality", "diagnostics"],
+  "resource_ids": [
+    "app.python", "app.environment", "app.assets", "tesseract.runtime", "tesseract.tessdata",
+    "bergamot.node", "bergamot.runtime", "bergamot.enru", "bergamot.enuk", "bergamot.jaen", "bergamot.zhen", "bergamot.zh_hant_en",
+    "quality.bergamot", "quality.block2_fast", "quality.block2_quality",
+    "llama.runtime.cuda", "llama.runtime.vulkan", "llama.runtime.vulkan.pcache1",
+    "translategemma.q6", "translategemma.chat_template", "milmmt.q6",
+    "csanmt.runtime", "csanmt.model", "csanmt.worker", "fugu.model", "fugu.worker", "opencc.runtime", "marian.enru",
+    "paddle.fast_det", "paddle.fast_rec", "paddle.full_det", "paddle.full_rec", "paddle.block2_det", "paddle.block2_rec"
+  ],
+  "not_payload_resources": {
+    "translation.models": "Legacy compatibility/cache-rejection/environment namespace, not an instruction to copy the old models tree",
+    "bergamot.wasm": "Legacy optional WASM namespace; actual worker JS/WASM closure is bergamot.runtime",
+    "llama.runtime": "Alias of llama.runtime.cuda; do not create a second copy",
+    "llama.runtime.hip": "Not installed/qualified; no payload currently exists"
+  },
+  "forbidden_roots": ["tools", "experiments", "data", ".git", ".idea", ".agents", ".codex", "profiles", "logs", "cache", "temp", "test_temp"],
+  "forbidden_components": ["__pycache__", ".pytest_cache", "tests", "test", "benchmarks", "fixtures", "node_modules/.cache"],
+  "forbidden_suffixes": [".pyc", ".pyo", ".dpapi", ".sqlite", ".sqlite3", ".db", ".db-wal", ".db-shm", ".log", ".key", ".pem", ".pfx", ".p12", ".zip", ".7z"],
+  "installation_metadata_template": {"data_root": "data"}
+}

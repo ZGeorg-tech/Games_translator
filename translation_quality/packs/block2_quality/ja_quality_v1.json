@@ -1,0 +1,41 @@
+{
+  "pack_id": "block2_fast_ja_v02",
+  "source_lang": "ja",
+  "memory_identity": "block2_fast_ja_v02",
+  "precedence": 20,
+  "exact": [
+    {"id": "ui_save", "source": "保存", "en": "Save", "ru": "Сохранить", "uk": "Зберегти"},
+    {"id": "ui_load", "source": "ロード", "en": "Load", "ru": "Загрузить", "uk": "Завантажити"},
+    {"id": "ui_continue", "source": "続ける", "en": "Continue", "ru": "Продолжить", "uk": "Продовжити"},
+    {"id": "ui_new_game", "source": "ニューゲーム", "en": "New Game", "ru": "Новая игра", "uk": "Нова гра"},
+    {"id": "ui_settings", "source": "設定", "en": "Settings", "ru": "Настройки", "uk": "Налаштування"},
+    {"id": "ui_exit", "source": "終了", "en": "Exit", "ru": "Выйти", "uk": "Вийти"},
+    {"id": "quest_updated", "source": "クエスト更新", "en": "Quest updated.", "ru": "Задание обновлено.", "uk": "Завдання оновлено."},
+    {"id": "quest_complete", "source": "クエスト完了", "en": "Quest completed.", "ru": "Задание выполнено.", "uk": "Завдання виконано."},
+    {"id": "hotkey_hold_run", "source": "[Shift]を押し続けて走る", "en": "Hold [Shift] to run.", "ru": "Удерживайте [Shift], чтобы бежать.", "uk": "Утримуйте [Shift], щоб бігти."},
+    {"id": "status_not_enough_mp", "source": "MPが足りない", "en": "Not enough MP.", "ru": "Недостаточно MP.", "uk": "Недостатньо MP."},
+    {"id": "deadline_return_before_midnight", "source": "真夜中までに戻れ", "en": "Return before midnight.", "ru": "Вернитесь до полуночи.", "uk": "Поверніться до опівночі."}
+  ],
+  "known_names": [
+    {"id": "akira", "source_forms": ["アキラ"], "en": "Akira", "ru": "Акира", "uk": "Акіра"},
+    {"id": "yuki", "source_forms": ["ユキ"], "en": "Yuki", "ru": "Юки", "uk": "Юкі"},
+    {"id": "ren", "source_forms": ["レン"], "en": "Ren", "en_aliases": ["Len"], "ru": "Рэн", "uk": "Рен"},
+    {"id": "mika", "source_forms": ["ミカ"], "en": "Mika", "en_aliases": ["Micah"], "ru": "Мика", "uk": "Міка"},
+    {"id": "leon", "source_forms": ["レオン"], "en": "Leon", "ru": "Леон", "uk": "Леон"}
+  ],
+  "honorifics": [
+    {"id": "san", "source_forms": ["さん"], "en": "-san", "ru": "-сан", "uk": "-сан"},
+    {"id": "kun", "source_forms": ["君", "くん"], "en": "-kun", "ru": "-кун", "uk": "-кун"},
+    {"id": "chan", "source_forms": ["ちゃん"], "en": "-chan", "ru": "-тян", "uk": "-тян"},
+    {"id": "sama", "source_forms": ["様", "さま"], "en": "-sama", "ru": "-сама", "uk": "-сама"},
+    {"id": "senpai", "source_forms": ["先輩"], "en": "-senpai", "ru": "-сэмпай", "uk": "-сенпай"},
+    {"id": "sensei", "source_forms": ["先生"], "en": "-sensei", "ru": "-сэнсэй", "uk": "-сенсей"},
+    {"id": "dono", "source_forms": ["殿"], "en": "-dono", "ru": "-доно", "uk": "-доно"}
+  ],
+  "terms": [
+    {"id": "starfall_slash", "source_forms": ["星落とし斬り"], "en": "Starfall Slash", "ru": "Удар Звездопада", "uk": "Удар Зорепаду", "kind": "skill"},
+    {"id": "starfire_rune", "source_forms": ["星火のルーン"], "en": "Starfire Rune", "ru": "руна Звёздного Огня", "uk": "руна Зоряного Вогню", "kind": "fantasy_term"},
+    {"id": "quantum_reactor", "source_forms": ["量子炉"], "en": "quantum reactor", "ru": "квантовый реактор", "uk": "квантовий реактор", "kind": "technical_term"},
+    {"id": "moonshadow_station", "source_forms": ["月影ステーション"], "en": "Moonshadow Station", "ru": "станция «Лунная Тень»", "uk": "станція «Місячна Тінь»", "kind": "place"}
+  ]
+}

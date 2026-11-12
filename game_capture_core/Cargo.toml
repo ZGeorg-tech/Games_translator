@@ -1,0 +1,19 @@
+[package]
+name = "game_capture_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "game_capture_core"
+# Указываем, что компилируем динамическую библиотеку (.pyd) для Python
+crate-type = ["cdylib"]
+
+[dependencies]
+# Движок захвата окон Windows Graphics Capture
+windows-capture = "1.5.0" 
+
+# Обновленный мост для Python с полной нативной поддержкой Python 3.13+
+pyo3 = { version = "0.23", features = ["extension-module"] }
+
+# Библиотека для быстрой работы с пикселями (резка кадров)
+image = "0.24"

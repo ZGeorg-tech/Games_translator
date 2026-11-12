@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "games_translator.quality_pack.schema.json",
+  "title": "Games Translator Quality Pack",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "pack_id",
+    "source_lang",
+    "target_lang",
+    "normalization",
+    "exact_phrases",
+    "source_aware_rules",
+    "context_lexicon"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "games_translator.quality_pack"
+    },
+    "pack_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_lang": {
+      "const": "en"
+    },
+    "target_lang": {
+      "enum": [
+        "ru",
+        "uk"
+      ]
+    },
+    "content_revision": {
+      "type": "string"
+    },
+    "runtime_identity": {
+      "const": "content_digest_only"
+    },
+    "normalization": {
+      "type": "object"
+    },
+    "structure_policy_file": {
+      "type": "string"
+    },
+    "target_validation_file": {
+      "type": "string"
+    },
+    "future_override_order": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exact_phrases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "match",
+          "source_variants",
+          "preferred_target",
+          "application",
+          "risk_flags"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string"
+          },
+          "match": {
+            "const": "normalized_exact"
+          },
+          "source_variants": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "preferred_target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "application": {
+            "enum": [
+              "replace",
+              "reference_only"
+            ]
+          },
+          "risk_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "punctuation_sensitive": {
+            "type": "boolean"
+          },
+          "speaker_prefix_safe": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "context_lexicon": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "source_aware_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "priority",
+          "source_pattern",
+          "mode",
+          "confidence",
+          "flags"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "integer"
+          },
+          "source_pattern": {
+            "type": "string"
+          },
+          "include_source_pattern": {
+            "type": "string"
+          },
+          "exclude_source_pattern": {
+            "type": "string"
+          },
+          "target_pattern": {
+            "type": "string"
+          },
+          "replacement": {
+            "type": "string"
+          },
+          "full_replacement": {
+            "type": "string"
+          },
+          "mode": {
+            "enum": [
+              "target_substitution",
+              "full_replacement"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "provenance": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

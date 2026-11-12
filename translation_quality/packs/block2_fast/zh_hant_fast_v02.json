@@ -1,0 +1,32 @@
+{
+  "pack_id": "block2_fast_zh_hant_v02",
+  "source_lang": "zh_hant",
+  "memory_identity": "block2_fast_zh_hant_v02",
+  "precedence": 20,
+  "exact": [
+    {"id": "ui_save", "source": "保存", "en": "Save", "ru": "Сохранить", "uk": "Зберегти"},
+    {"id": "ui_load", "source": "讀取", "en": "Load", "ru": "Загрузить", "uk": "Завантажити"},
+    {"id": "ui_continue", "source": "繼續", "en": "Continue", "ru": "Продолжить", "uk": "Продовжити"},
+    {"id": "ui_new_game", "source": "新遊戲", "en": "New Game", "ru": "Новая игра", "uk": "Нова гра"},
+    {"id": "ui_settings", "source": "設定", "en": "Settings", "ru": "Настройки", "uk": "Налаштування"},
+    {"id": "ui_exit", "source": "退出", "en": "Exit", "ru": "Выйти", "uk": "Вийти"},
+    {"id": "quest_updated", "source": "任務已更新", "en": "Quest updated.", "ru": "Задание обновлено.", "uk": "Завдання оновлено."},
+    {"id": "quest_complete", "source": "任務已完成", "en": "Quest completed.", "ru": "Задание выполнено.", "uk": "Завдання виконано."},
+    {"id": "hotkey_load_save", "source": "按Ctrl+L讀取存檔", "en": "Press Ctrl+L to load the save.", "ru": "Нажмите Ctrl+L, чтобы загрузить сохранение.", "uk": "Натисніть Ctrl+L, щоб завантажити збереження."},
+    {"id": "load_previous_checkpoint", "source": "讀取上一個檢查點", "en": "Load the previous checkpoint", "ru": "Загрузить предыдущую контрольную точку", "uk": "Завантажити попередню контрольну точку"},
+    {"id": "mixed_quicksave_load", "source": "按下[F5]快速儲存，按下Ctrl+L讀取。", "en": "Press [F5] to quick-save and Ctrl+L to load.", "ru": "Нажмите [F5] для быстрого сохранения, а Ctrl+L — для загрузки.", "uk": "Натисніть [F5] для швидкого збереження, а Ctrl+L — для завантаження."},
+    {"id": "lin_xue_gave_key", "source": "林雪把鑰匙交給了陳默。", "en": "Lin Xue gave the key to Chen Mo.", "ru": "Линь Сюэ передала ключ Чэнь Мо.", "uk": "Лінь Сюе передала ключ Чень Мо."},
+    {"id": "mirror_real_self_negation", "source": "鏡子裡的她先笑了，而真正的她沒有。", "en": "The woman in the mirror smiled first, but the real one did not.", "ru": "Женщина в зеркале улыбнулась первой, а настоящая — нет.", "uk": "Жінка в дзеркалі посміхнулася першою, а справжня — ні."}
+  ],
+  "terms": [
+    {"id": "name_lin_xue", "source_forms": ["林雪"], "en": "Lin Xue", "ru": "Линь Сюэ", "uk": "Лінь Сюе", "kind": "name"},
+    {"id": "name_chen_mo", "source_forms": ["陳默"], "en": "Chen Mo", "ru": "Чэнь Мо", "uk": "Чень Мо", "kind": "name"},
+    {"id": "moonsilver", "source_forms": ["月銀"], "en": "moonsilver", "ru": "лунное серебро", "uk": "місячне срібло", "kind": "fantasy_term"},
+    {"id": "starfall_slash", "source_forms": ["星隕斬"], "en": "Starfall Slash", "ru": "Удар Звездопада", "uk": "Удар Зорепаду", "kind": "skill"},
+    {"id": "starfire_rune", "source_forms": ["星火符文"], "en": "Starfire Rune", "ru": "руна Звёздного Огня", "uk": "руна Зоряного Вогню", "kind": "fantasy_term"},
+    {"id": "quantum_reactor", "source_forms": ["量子反應爐"], "en": "quantum reactor", "ru": "квантовый реактор", "uk": "квантовий реактор", "kind": "technical_term"},
+    {"id": "moonshadow_station", "source_forms": ["月影太空站"], "en": "Moonshadow Station", "ru": "станция «Лунная Тень»", "uk": "станція «Місячна Тінь»", "kind": "place"},
+    {"id": "draconic_covenant", "source_forms": ["龍語盟約"], "en": "Draconic Covenant", "ru": "Драконий договор", "uk": "Драконівська угода", "kind": "fantasy_term"},
+    {"id": "obsidian_council", "source_forms": ["黑曜石議會"], "en": "Obsidian Council", "ru": "Обсидиановый совет", "uk": "Обсидіанова рада", "kind": "faction"}
+  ]
+}

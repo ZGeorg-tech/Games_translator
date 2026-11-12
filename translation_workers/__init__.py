@@ -1,0 +1,1 @@
+"""Isolated translation worker components."""

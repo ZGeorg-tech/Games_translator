@@ -1,0 +1,73 @@
+1. What it does
+
+Games_translator reads text from a selected area of a game window. OCR (text recognition) recognizes the characters, a translator processes them, and the overlay displays the result. Offline uses local models; Online uses an external service. Live watches a fixed area; Dynamic translates a selection on demand.
+
+2. Quick start
+
+1) Open the game and double-click Games_translator.exe.
+2) Select the game window. Use Refresh if the window is missing.
+3) Choose a language block at the top, then check the source and target languages.
+4) Select offline or online. In online mode, open Online Translation and configure the provider.
+5) For offline, choose the local translator or translation profile available in your block. Check the OCR engine and the assignments under Hotkeys.
+6) To reuse settings, select a saved game profile and check the restored choices. The launcher creates a profile for a new game when preparing the overlay launch.
+7) Select LAUNCH OVERLAY and wait for OCR and the translator to be ready.
+8) In Setup, drag the frame over the text and resize it using the bottom-right grip.
+9) Use the assigned Setup / translation hotkey to start Live. In standalone Dynamic mode, skip Live frame setup and use the Dynamic hotkey.
+
+3. Language blocks
+
+These are three modes of one application:
+Block 1: EN → RU / UK
+Block 2: JA / ZH-CN / ZH-TW → EN / RU / UK
+Block 3: EN → JA / ZH-CN / ZH-TW
+
+4. Translation modes
+
+Fast favors speed and lower resource use, with possible mistakes or awkward wording. Quality aims for better output at a higher resource and latency cost. In Block 1, Auto uses Bergamot; TranslateGemma Q6 choices are for Quality. Blocks 2 and 3 offer a Fast / Quality profile.
+
+Online needs an internet connection and a configured provider, with an API key where required. Providers may impose limits, charge fees, or return errors. Automated integration checks passed; not every integration was tested with real accounts.
+
+5. OCR (text recognition)
+
+Tesseract is used for English. Paddle Fast is lighter than Paddle Full. CJK Paddle Fast is for Japanese and Chinese in Block 2. Choices depend on the block, mode and subtitle background. Speed and accuracy vary by game.
+
+6. Live and Dynamic
+
+In Edit, move or resize the frame. Live monitors that area. The visibility action hides or shows the translation. Force refresh requests a fresh Live OCR and translation cycle without bypassing validation.
+
+Dynamic works on its own, without Live, or alongside it. Use both for games with text outside the usual subtitle area, such as quests, dialogue, menus, item descriptions and interface labels. Live keeps translating the main area while Dynamic lets you select other areas with the mouse as needed.
+
+Enable Dynamic in combined or standalone mode. Press its assigned hotkey and drag around the text. Esc cancels selection. Press the Dynamic hotkey again to cancel selection or pending work, or dismiss the result.
+
+7. Hotkeys
+
+Use Hotkeys to change Setup / translation, Show / hide translation, Dynamic, and Force refresh. Assignments come from the current profile. Avoid shortcuts already used by the game.
+
+8. Appearance
+
+Text settings control size, color, outline and plate opacity. Live fits the font to the frame; Dynamic Auto-Fit adjusts the result window and font. Adaptive Plate is Live-only: it samples a solid original subtitle background and covers the original text with that color. Results on uneven backgrounds are not guaranteed. Dynamic uses manual background settings.
+
+9. Profiles and Translation Memory
+
+A profile stores the game's region, language, OCR, translator, appearance and hotkeys. Select it on a later run. Region changes are saved on normal overlay close. Local TM can reuse a previous translation when the text and route settings match.
+
+10. Hardware
+
+Designed for Windows 10/11. NVIDIA is the primary tested platform. Vulkan is available, but AMD has not been fully qualified on real hardware; Intel has not been tested. Offline Quality may use substantial resources.
+
+11. Diagnostics
+
+Detailed logging is off by default. Enable it to investigate an issue; it takes effect on the next overlay launch.
+Session logs:
+{logs_path}
+Review logs before sharing: they may contain game text, translations and technical details. The separate Important dialog covers limitations and anti-cheat risks.
+
+12. Troubleshooting
+
+• Missing game window: start the game, use Refresh, and try windowed or borderless mode.
+• OCR misses text: tighten the frame around the lines and check the language and OCR.
+• Translator not ready: wait for preparation; check local resources or Online settings if it fails.
+• Online error: check the network, provider, model, key and limits.
+• Quality is slow: try Fast or a lighter local translator.
+• No subtitles: check Live, visibility and text inside the frame.
+• Hotkey fails: check the current profile assignment, game conflicts and readiness.

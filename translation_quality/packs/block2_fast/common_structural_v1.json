@@ -1,0 +1,21 @@
+{
+  "pack_id": "block2_fast_common_structural_v1",
+  "sentinel_format": "GTXKEEP{index:04d}XGT",
+  "precedence": 10,
+  "literal_patterns": [
+    {"id": "bracket_key", "pattern": "\\[[A-Za-z0-9+_-]+\\]"},
+    {"id": "key_combo", "pattern": "(?<![A-Za-z0-9_])(?:Ctrl|Alt|Shift)\\+[A-Za-z0-9]+(?![A-Za-z0-9_])"},
+    {"id": "brace_placeholder", "pattern": "\\{[A-Za-z_][A-Za-z0-9_]*\\}"},
+    {"id": "percent_placeholder", "pattern": "%[A-Za-z_][A-Za-z0-9_]*%"},
+    {"id": "markup", "pattern": "<[^<>\\r\\n]+>"},
+    {"id": "number_unit", "pattern": "(?<![A-Za-z0-9_.])\\d+(?:[.,]\\d+)?(?:\\s*%|\\s*(?:HP|MP|XP|EXP|CP|s|sec|min|kg|m|km))?(?![A-Za-z0-9_])"},
+    {"id": "game_abbreviation", "pattern": "(?<![A-Za-z0-9_])(?:HP|MP|XP|EXP|CP|DPS|NPC)(?![A-Za-z0-9_])"}
+  ],
+  "validation": {
+    "require_all_literals": true,
+    "reject_unknown_markers": true,
+    "reject_duplicate_markers": true,
+    "reject_source_cjk_remnants": true
+  },
+  "future_precedence": ["common_structural", "source_fast_pack", "game_profile_override"]
+}

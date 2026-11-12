@@ -1,0 +1,134 @@
+{
+  "schema_id": "games_translator.quality_structure",
+  "content_revision": "2026-08-05",
+  "pipeline_order": [
+    "original_source",
+    "exact_phrase_lookup",
+    "prepare_literal_sentinels",
+    "bergamot_worker",
+    "restore_literal_sentinels",
+    "source_aware_corrections",
+    "remove_spurious_outer_quotes",
+    "restore_speaker_prefix",
+    "restore_terminal_punctuation",
+    "restore_balanced_wrappers",
+    "validate_target",
+    "finalize_whitespace"
+  ],
+  "terminal_punctuation": {
+    "source_tokens": [
+      "...",
+      "…",
+      "?!",
+      "!?",
+      ".",
+      "?",
+      "!"
+    ],
+    "do_not_replace_existing": true,
+    "insert_before_closers": [
+      "\"",
+      "”",
+      "»",
+      "'",
+      "’",
+      ")",
+      "]",
+      "}"
+    ],
+    "preserve_question_exclamation_order": true,
+    "skip_when_source_has_none": true
+  },
+  "outer_quotes": {
+    "pairs": [
+      [
+        "\"",
+        "\""
+      ],
+      [
+        "“",
+        "”"
+      ],
+      [
+        "„",
+        "“"
+      ],
+      [
+        "«",
+        "»"
+      ],
+      [
+        "'",
+        "'"
+      ],
+      [
+        "‘",
+        "’"
+      ]
+    ],
+    "remove_only_when_source_not_fully_quoted": true,
+    "remove_only_one_pair": true,
+    "preserve_internal_quotes": true
+  },
+  "speaker_prefix": {
+    "enabled": true,
+    "max_prefix_chars": 40,
+    "pattern": "^(?P<prefix>[A-Za-zА-Яа-яЁёІіЇїЄєҐґ0-9][A-Za-zА-Яа-яЁёІіЇїЄєҐґ0-9 ._\\-]{0,39}):\\s+(?P<body>.+)$",
+    "reject_time_pattern": "^\\d{1,2}:\\d{2}$",
+    "reject_url_tokens": [
+      "http://",
+      "https://",
+      "www."
+    ],
+    "keep_source_prefix_verbatim": true,
+    "do_not_duplicate_any_target_prefix": true
+  },
+  "literal_protection": {
+    "technical_placeholder_patterns": [
+      "\\$\\{(?:[A-Za-z_][A-Za-z0-9_.-]*|\\d+)\\}",
+      "\\{\\{(?:[A-Za-z_][A-Za-z0-9_.-]*|\\d+)\\}\\}",
+      "(?<!\\{)\\{(?:[A-Za-z_][A-Za-z0-9_.-]*|\\d+)\\}(?!\\})",
+      "%(?:\\([A-Za-z_][A-Za-z0-9_]*\\))?(?:\\d+\\$)?[-+ #0]*(?:\\d+|\\*)?(?:\\.(?:\\d+|\\*))?[sdif]"
+    ],
+    "markup_tag_patterns": [
+      "</?(?:color|b|i)>",
+      "<(?:color|size|sprite)=[^<>\\r\\n]+>"
+    ],
+    "escape_sequence_patterns": [
+      "\\\\[nrt]"
+    ],
+    "key_names": [
+      "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+      "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+      "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
+      "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12",
+      "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20", "F21", "F22", "F23", "F24",
+      "Esc", "Tab", "Enter", "Space", "Shift", "Ctrl", "Alt", "Win", "Home", "End",
+      "Insert", "Delete", "PageUp", "PageDown", "Up", "Down", "Left", "Right",
+      "LMB", "RMB", "MMB", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"
+    ],
+    "game_abbreviation_whitelist": [
+      "HP", "MP", "CP", "XP", "EXP", "AP", "SP", "TP", "BP", "EP", "RP", "DPS", "FPS", "NPC",
+      "PvP", "PvE", "AoE", "DoT", "HoT", "ATK", "DEF", "STR", "DEX", "INT", "VIT", "AGI", "LUK"
+    ],
+    "sentinel": {
+      "format": "GTXKEEP{index:04d}XGT"
+    },
+    "policy": {
+      "restore_only_from_sentinel": true,
+      "append_missing_literals": false,
+      "protect_plain_numbers": false,
+      "protect_plain_percentages": false,
+      "protect_arbitrary_bracketed_text": false,
+      "protect_arbitrary_uppercase_words": false
+    },
+    "do_not_translate": true
+  },
+  "whitespace": {
+    "trim_outer": true,
+    "collapse_horizontal_runs": true,
+    "preserve_newlines": true,
+    "remove_space_before_punctuation": true,
+    "ensure_space_after_sentence_punctuation": true
+  }
+}

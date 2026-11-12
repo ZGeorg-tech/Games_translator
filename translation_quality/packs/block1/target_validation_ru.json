@@ -1,0 +1,61 @@
+{
+  "language": "ru",
+  "forbidden_mixed_script_policy": "flag_only",
+  "checks": [
+    {
+      "id": "unbalanced_quotes",
+      "type": "balanced_pairs",
+      "pairs": [
+        [
+          "«",
+          "»"
+        ],
+        [
+          "“",
+          "”"
+        ],
+        [
+          "\"",
+          "\""
+        ]
+      ]
+    },
+    {
+      "id": "unbalanced_brackets",
+      "type": "balanced_pairs",
+      "pairs": [
+        [
+          "(",
+          ")"
+        ],
+        [
+          "[",
+          "]"
+        ],
+        [
+          "{",
+          "}"
+        ]
+      ]
+    },
+    {
+      "id": "repeated_word_fragment",
+      "type": "regex_flag",
+      "pattern": "\\b([А-Яа-яЁё]{4,})\\s+\\1\\b",
+      "flags": [
+        "ignore_case"
+      ]
+    },
+    {
+      "id": "mixed_script_inside_word",
+      "type": "regex_flag",
+      "pattern": "(?i)(?=[A-Za-zА-Яа-яЁё]*[A-Za-z])(?=[A-Za-zА-Яа-яЁё]*[А-Яа-яЁё])[A-Za-zА-Яа-яЁё]{4,}"
+    },
+    {
+      "id": "suspicious_corruption_known",
+      "type": "regex_flag",
+      "pattern": "(?i)\\b(справистеся|перенагр\\w*|недостаюр\\w*)\\b"
+    }
+  ],
+  "unknown_words": "do_not_autocorrect"
+}
