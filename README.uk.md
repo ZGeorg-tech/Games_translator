@@ -439,7 +439,7 @@ Fast зазвичай створює менше навантаження й кр
 | **Block 2** | JA / ZH → EN / RU / UK | **6,24 GiB** | 4 |
 | **Block 3** | EN → JA / ZH | **8,85 GiB** | 5 |
 
-**Комплекти будуть доступні після публікації. Посилань на файли Releases поки немає.**
+[Block 1](docs/DOWNLOADS.md#block-1) · [Block 2](docs/DOWNLOADS.md#block-2) · [Block 3](docs/DOWNLOADS.md#block-3) · [GitHub Release R04b](https://github.com/ZGeorg-tech/Games_translator/releases/tag/r04b)
 
 [Точні команди об’єднання та SHA256](docs/DOWNLOADS.md)
 

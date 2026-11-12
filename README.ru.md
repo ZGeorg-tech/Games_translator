@@ -575,7 +575,7 @@ Online позволяет выполнять перевод на внешнем 
 
 Размеры приведены по результатам подготовленных сборок R04b.
 
-**Комплекты будут доступны после публикации. Ссылок на файлы Releases пока нет.**
+[Block 1](docs/DOWNLOADS.md#block-1) · [Block 2](docs/DOWNLOADS.md#block-2) · [Block 3](docs/DOWNLOADS.md#block-3) · [GitHub Release R04b](https://github.com/ZGeorg-tech/Games_translator/releases/tag/r04b)
 
 [Точные команды объединения и SHA256](docs/DOWNLOADS.md)
 

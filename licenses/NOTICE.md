@@ -3,7 +3,7 @@
 The author has selected **GPL-3.0-only** for the Games_translator application source; see the [complete license](../LICENSE). The upstream texts below apply only to their respective components. Models, runtimes and artwork are not relicensed under the application's GPL by inclusion or reference.
 
 - [Author license and scope](AUTHOR-LICENSE-STATUS.md)
-- [Remaining publication gates](PUBLICATION-GATES.md)
+- [Release licenses and corresponding source](PUBLICATION-GATES.md)
 - [Third-party component inventory](THIRD_PARTY.md)
 - [R04b package license texts and notices](PACKAGE-NOTICES.md), including CPython 3.13.5, Node.js 24.18.0, PyQt6 6.11.0, Qt 6.11.1, SIP 13.11.1 and OpenCC 1.4.1.
 - [Gemma notice](Gemma-NOTICE.txt) for the covered TranslateGemma and MiLMMT distributions. The notice does not substitute for the applicable Gemma agreement.

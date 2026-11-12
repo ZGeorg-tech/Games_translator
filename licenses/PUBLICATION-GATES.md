@@ -1,13 +1,11 @@
-# Conditions remaining before publication
+# Release licenses and corresponding source
 
-The application source license is [GPL-3.0-only](../LICENSE). Private source review, public source disclosure and release of Windows binaries are separate decisions. Do not make the repository public without the owner's separate explicit permission.
+The application source is [GPL-3.0-only](../LICENSE). The owner's declaration
+for project interface graphics is in [ASSET_ORIGIN.md](ASSET_ORIGIN.md).
+Models and proprietary redistributables retain their own terms.
 
-| Scope | Open condition | How to close it |
-| --- | --- | --- |
-| Source and artwork | Public redistribution evidence is missing for `assets/icons/flag_{en,ja,ru,ua,zh}.png`, `ui-check.svg`, `ui-chevron-up.svg`, and `ui-chevron-down.svg` in the same directory. The final handoff already approves the six memorial cards; the private original is excluded. | Record permission and attribution for the listed icons before public disclosure, or omit unlicensed assets from the public candidate. |
-| PyQt6 and Qt binaries (all blocks) | Examples: `PyQt6/QtCore.pyd`, `PyQt6/Qt6/bin/Qt6Core.dll` and `PyQt6/Qt6/plugins/platforms/qwindows.dll` in the core package domain. The PyQt6 6.11.0 metadata declares GPL-3.0-only and the Qt 6.11.1 wheel metadata LGPL v3. The included texts do not establish corresponding source for the Windows wheels or LGPL replaceability. The SIP 13.11.1 BSD-2-Clause notice is preserved. | Provide a corresponding-source distribution for the exact binaries, including applicable build materials and changes, and document and verify the LGPL library replacement path. Upstream references: [PyQt6 6.11.0 source distribution](https://pypi.org/project/PyQt6/6.11.0/#files), [Qt 6.11.1 source archives](https://download.qt.io/archive/qt/6.11/6.11.1/single/), [Qt licensing](https://doc.qt.io/qt-6/licensing.html), [SIP 13.11.1](https://pypi.org/project/PyQt6-sip/13.11.1/). These references alone are not proof of wheel-to-source correspondence. |
-| Gemma-derived GGUF files | Exact TranslateGemma and MiLMMT Q6 conversion provenance and the applicable Gemma agreement have not been closed. | Tie each weight/template to upstream revision and conversion/hash; include the applicable agreement and notice, mark changes, and pass through required use restrictions. Otherwise leave the weights out of a published candidate. |
-| Remaining OCR/MT payload | Exact FuguMT revision/changes and attribution; Bergamot model artifacts and matching WASM source; Tesseract English traineddata provenance; Paddle v4 Mobile and v6 Medium weight provenance. Local Apache declarations for Marian, CSANMT and Paddle Small still require exact asset attribution and applicable upstream notices. | Match staged files to the original release/revision and hashes, document changes, preserve licenses and attribution, and satisfy CC BY-SA for distributed Fugu material. Do not infer a model's rights from its engine. |
-| Native and transitive components | No complete exact-source/license record for the Windows Tesseract DLL closure, ggml/CUDA/Vulkan binaries, NVIDIA `cublas64_13.dll`, `cublasLt64_13.dll` and `cudart64_13.dll`, MSVC DLLs, and all Python/native/Rust dependencies (including WGC build dependencies). Some staged packages have no standalone notice in the R04 inventory. | Obtain notices and corresponding sources where required for exact release builds; match NVIDIA DLLs to the applicable [CUDA redistributable list and terms](https://docs.nvidia.com/cuda/eula/index.html), and MSVC DLLs to the applicable [Visual Studio redistribution list](https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution). Do not include unverified binaries. Vulkan `b10057-pcache1` is already excluded from R04b, not cleared for release. |
-
-No binary links are listed while the packages are held. Rebuilding or excluding a file invalidates its package hash; refresh metadata and repeat the applicable smoke check. The wallet text and QR contents match the approved handoff; that check does not validate control of the addresses.
+Each R04b Windows ZIP includes `licenses/release/` with notices, full license
+texts and instructions. The [R04b Release](https://github.com/ZGeorg-tech/Games_translator/releases/tag/r04b)
+includes the shared corresponding source archive, alongside the binary downloads.
+See [source and DLL replacement instructions](SOURCE-ACCESS.md) and
+[the verified download manifest](../docs/DOWNLOADS.md).

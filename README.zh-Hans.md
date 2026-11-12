@@ -439,7 +439,7 @@ Fast 通常负载较低，适合需要给游戏留出资源的情形。Quality �
 | **Block 2** | JA / ZH → EN / RU / UK | **6.24 GiB** | 4 |
 | **Block 3** | EN → JA / ZH | **8.85 GiB** | 5 |
 
-**安装包将在发布后提供。目前没有 Releases 文件链接。**
+[Block 1](docs/DOWNLOADS.md#block-1) · [Block 2](docs/DOWNLOADS.md#block-2) · [Block 3](docs/DOWNLOADS.md#block-3) · [GitHub Release R04b](https://github.com/ZGeorg-tech/Games_translator/releases/tag/r04b)
 
 [准确的合并命令与 SHA256](docs/DOWNLOADS.md)
 
